@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="4" time="0.023" errors="0" skipped="2" tests="10" name="core.AppTest">
+<testsuite failures="2" time="0.059" errors="0" skipped="0" tests="47" name="core.AllTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre/lib"/>
     <property name="java.vm.version" value="24.51-b03"/>
     <property name="gopherProxySet" value="false"/>
+    <property name="build.version" value="1.2"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=":"/>
@@ -14,6 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
+    <property name="test" value="AllTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/Users/olgaromero/Workspace/Junit"/>
     <property name="java.runtime.version" value="1.7.0_51-b13"/>
@@ -44,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher site install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean site test -Dtest=AllTest -Dbuild.version=1.2"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -62,15 +64,16 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.006" classname="core.AppTest" name="Test_01_AssertEquals_Positive"/>
-  <testcase time="0" classname="core.AppTest" name="Test_07_AssertFalse_Positive"/>
-  <testcase time="0.001" classname="core.AppTest" name="Test_04_AssertSame_Positive"/>
-  <testcase time="0.006" classname="core.AppTest" name="Test_05_AssertSame_Negative">
-    <failure message="Integer not the same. expected same:&lt;54&gt; was not:&lt;55&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Integer not the same. expected same:&lt;54&gt; was not:&lt;55&gt;
+  <testcase time="0.005" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 0: Number: 1; isPrime? true]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 1: Number: 2; isPrime? true]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 2: Number: 3; isPrime? true]"/>
+  <testcase time="0.006" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 3: Number: 4; isPrime? false]">
+    <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotSame(Assert.java:737)
-	at org.junit.Assert.assertSame(Assert.java:680)
-	at core.AppTest.Test_05_AssertSame_Negative(AppTest.java:38)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at core.PrimeNumberCheckerTest.testPrimeNumberChecker(PrimeNumberCheckerTest.java:94)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -80,7 +83,6 @@
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
@@ -89,8 +91,22 @@
 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
@@ -105,57 +121,51 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
+    <system-out>Is 4 a prime number? - false
+</system-out>
   </testcase>
-  <testcase time="0.001" classname="core.AppTest" name="Test_02_AssertEquals_Negative">
-    <failure message="String not the same. expected:&lt;Testing [TestNG 6]&gt; but was:&lt;Testing [JUnit 4]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: String not the same. expected:&lt;Testing [TestNG 6]&gt; but was:&lt;Testing [JUnit 4]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:115)
-	at core.AppTest.Test_02_AssertEquals_Negative(AppTest.java:28)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</failure>
-  </testcase>
-  <testcase time="0.003" classname="core.AppTest" name="Test_03_AssertEquals_Ignored">
-    <skipped/>
-  </testcase>
-  <testcase time="0" classname="core.AppTest" name="Test_09_AssertTrue_Positive"/>
-  <testcase time="0.002" classname="core.AppTest" name="Test_10_AssertTrue_Negative">
-    <failure message="Boolean should be true" type="java.lang.AssertionError">java.lang.AssertionError: Boolean should be true
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 4: Number: 5; isPrime? true]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 5: Number: 6; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 6: Number: 7; isPrime? true]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 7: Number: 8; isPrime? false]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 8: Number: 9; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 9: Number: 10; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 10: Number: 11; isPrime? true]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 11: Number: 12; isPrime? false]"/>
+  <testcase time="0.004" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 12: Number: 13; isPrime? true]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 13: Number: 14; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 14: Number: 15; isPrime? false]"/>
+  <testcase time="0.002" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 15: Number: 16; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 16: Number: 17; isPrime? true]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 17: Number: 18; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 18: Number: 19; isPrime? true]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 19: Number: 20; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 20: Number: 21; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 21: Number: 22; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 22: Number: 23; isPrime? true]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 23: Number: 24; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 24: Number: 25; isPrime? false]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 25: Number: 26; isPrime? false]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 26: Number: 27; isPrime? false]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 27: Number: 28; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 28: Number: 29; isPrime? true]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 29: Number: 30; isPrime? false]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 30: Number: 31; isPrime? true]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 31: Number: 32; isPrime? false]"/>
+  <testcase time="0.004" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 32: Number: 33; isPrime? false]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 33: Number: 34; isPrime? false]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 34: Number: 35; isPrime? false]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 35: Number: 36; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 36: Number: 37; isPrime? true]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 37: Number: 38; isPrime? false]"/>
+  <testcase time="0.002" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 38: Number: 39; isPrime? true]">
+    <failure message="expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;
 	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at core.AppTest.Test_10_AssertTrue_Negative(AppTest.java:54)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at core.PrimeNumberCheckerTest.testPrimeNumberChecker(PrimeNumberCheckerTest.java:94)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
@@ -163,7 +173,6 @@
 	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
 	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
 	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
@@ -172,8 +181,22 @@
 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
 	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
@@ -188,49 +211,15 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
+    <system-out>Is 39 a prime number? - true
+</system-out>
   </testcase>
-  <testcase time="0.002" classname="core.AppTest" name="Test_08_AssertFalse_Negative">
-    <failure message="Boolean should be false" type="java.lang.AssertionError">java.lang.AssertionError: Boolean should be false
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertFalse(Assert.java:64)
-	at core.AppTest.Test_08_AssertFalse_Negative(AppTest.java:48)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</failure>
-  </testcase>
-  <testcase time="0.002" classname="core.AppTest" name="Test_06_AssertSame_Ignored">
-    <skipped/>
-  </testcase>
+  <testcase time="0.019" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 39: Number: 40; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 40: Number: 41; isPrime? true]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 41: Number: 42; isPrime? false]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 42: Number: 43; isPrime? true]"/>
+  <testcase time="0.001" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 43: Number: 44; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 44: Number: 45; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 45: Number: 46; isPrime? false]"/>
+  <testcase time="0" classname="core.PrimeNumberCheckerTest" name="testPrimeNumberChecker[Iteration # 46: Number: 47; isPrime? true]"/>
 </testsuite>

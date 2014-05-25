@@ -96,12 +96,12 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td>10</td>
+<td>47</td>
 <td>0</td>
-<td>4</td>
 <td>2</td>
-<td>40%</td>
-<td>0.023</td></tr></table><br />
+<td>0</td>
+<td>95.745%</td>
+<td>0.059</td></tr></table><br />
 <p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></div>
 <div class="section">
 <h2>Package List<a name="Package_List"></a></h2><a name="Package_List"></a>
@@ -117,12 +117,12 @@ function toggleDisplay(elementId) {
 <th>Time</th></tr>
 <tr class="b">
 <td><a href="#core">core</a></td>
-<td>10</td>
+<td>47</td>
 <td>0</td>
-<td>4</td>
 <td>2</td>
-<td>40%</td>
-<td>0.023</td></tr></table><br />
+<td>0</td>
+<td>95.745%</td>
+<td>0.059</td></tr></table><br />
 <p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p>
 <div class="section">
 <h3>core<a name="core"></a></h3><a name="core"></a>
@@ -137,174 +137,256 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td><a href="#coreAppTest"><img src="images/icon_warning_sml.gif" alt="" /></a></td>
-<td><a href="#coreAppTest">AppTest</a></td>
-<td>10</td>
+<td><a href="#corePrimeNumberCheckerTest"><img src="images/icon_warning_sml.gif" alt="" /></a></td>
+<td><a href="#corePrimeNumberCheckerTest">PrimeNumberCheckerTest</a></td>
+<td>47</td>
 <td>0</td>
-<td>4</td>
 <td>2</td>
-<td>40%</td>
-<td>0.023</td></tr></table></div><br /></div>
+<td>0</td>
+<td>95.745%</td>
+<td>0.059</td></tr></table></div><br /></div>
 <div class="section">
 <h2>Test Cases<a name="Test_Cases"></a></h2><a name="Test_Cases"></a>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p>
 <div class="section">
-<h3>AppTest<a name="AppTest"></a></h3><a name="coreAppTest"></a>
+<h3>PrimeNumberCheckerTest<a name="PrimeNumberCheckerTest"></a></h3><a name="corePrimeNumberCheckerTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>Test_01_AssertEquals_Positive</td>
-<td>0.006</td></tr>
+<td>testPrimeNumberChecker[Iteration # 0: Number: 1; isPrime? true]</td>
+<td>0.005</td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>Test_07_AssertFalse_Positive</td>
+<td>testPrimeNumberChecker[Iteration # 1: Number: 2; isPrime? true]</td>
 <td>0</td></tr>
 <tr class="a">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>Test_04_AssertSame_Positive</td>
+<td>testPrimeNumberChecker[Iteration # 2: Number: 3; isPrime? true]</td>
 <td>0.001</td></tr>
 <tr class="b">
-<td><a href="#core.AppTest.Test_05_AssertSame_Negative"><img src="images/icon_error_sml.gif" alt="" /></a></td>
-<td><a href="#core.AppTest.Test_05_AssertSame_Negative">Test_05_AssertSame_Negative</a>
-<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay(&apos;core_AppTest_Test_05_AssertSame_Negative&apos;);"><span style="display:inline;" id="core_AppTest_Test_05_AssertSame_Negativeoff"> + </span><span style="display:none;" id="core_AppTest_Test_05_AssertSame_Negativeon"> - </span>[ Detail ]</a></div></td>
+<td><a href="#core.PrimeNumberCheckerTest.testPrimeNumberChecker[Iteration # 3: Number: 4; isPrime? false]"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a href="#core.PrimeNumberCheckerTest.testPrimeNumberChecker[Iteration # 3: Number: 4; isPrime? false]">testPrimeNumberChecker[Iteration # 3: Number: 4; isPrime? false]</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay(&apos;core_PrimeNumberCheckerTest_testPrimeNumberChecker[Iteration # 3: Number: 4; isPrime? false]&apos;);"><span style="display:inline;" id="core_PrimeNumberCheckerTest_testPrimeNumberChecker[Iteration # 3: Number: 4; isPrime? false]off"> + </span><span style="display:none;" id="core_PrimeNumberCheckerTest_testPrimeNumberChecker[Iteration # 3: Number: 4; isPrime? false]on"> - </span>[ Detail ]</a></div></td>
 <td>0.006</td></tr>
 <tr class="a">
 <td></td>
-<td>Integer not the same. expected same:&lt;54&gt; was not:&lt;55&gt;</td>
+<td>expected:&lt;false&gt; but was:&lt;true&gt;</td>
 <td></td></tr>
 <tr class="b">
 <td></td>
 <td>
-<div id="core_AppTest_Test_05_AssertSame_Negativeerror" style="display:none;">
+<div id="core_PrimeNumberCheckerTest_testPrimeNumberChecker[Iteration # 3: Number: 4; isPrime? false]error" style="display:none;">
 <div>
-<pre>java.lang.AssertionError: Integer not the same. expected same:&lt;54&gt; was not:&lt;55&gt;at org.junit.Assert.fail(Assert.java:88)at org.junit.Assert.failNotSame(Assert.java:737)at org.junit.Assert.assertSame(Assert.java:680)at core.AppTest.Test_05_AssertSame_Negative(AppTest.java:38)</pre></div></div></td>
+<pre>java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;at org.junit.Assert.fail(Assert.java:88)at org.junit.Assert.failNotEquals(Assert.java:743)at org.junit.Assert.assertEquals(Assert.java:118)at org.junit.Assert.assertEquals(Assert.java:144)at core.PrimeNumberCheckerTest.testPrimeNumberChecker(PrimeNumberCheckerTest.java:94)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:606)at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)at org.junit.runners.ParentRunner.run(ParentRunner.java:309)at org.junit.runners.Suite.runChild(Suite.java:127)at org.junit.runners.Suite.runChild(Suite.java:26)at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)at org.junit.runners.ParentRunner.run(ParentRunner.java:309)at org.junit.runners.Suite.runChild(Suite.java:127)at org.junit.runners.Suite.runChild(Suite.java:26)at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)at org.junit.runners.ParentRunner.run(ParentRunner.java:309)at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:606)at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)</pre></div></div></td>
 <td></td></tr>
 <tr class="a">
-<td><a href="#core.AppTest.Test_02_AssertEquals_Negative"><img src="images/icon_error_sml.gif" alt="" /></a></td>
-<td><a href="#core.AppTest.Test_02_AssertEquals_Negative">Test_02_AssertEquals_Negative</a>
-<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay(&apos;core_AppTest_Test_02_AssertEquals_Negative&apos;);"><span style="display:inline;" id="core_AppTest_Test_02_AssertEquals_Negativeoff"> + </span><span style="display:none;" id="core_AppTest_Test_02_AssertEquals_Negativeon"> - </span>[ Detail ]</a></div></td>
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 4: Number: 5; isPrime? true]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 5: Number: 6; isPrime? false]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 6: Number: 7; isPrime? true]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 7: Number: 8; isPrime? false]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 8: Number: 9; isPrime? false]</td>
 <td>0.001</td></tr>
 <tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 9: Number: 10; isPrime? false]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 10: Number: 11; isPrime? true]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 11: Number: 12; isPrime? false]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 12: Number: 13; isPrime? true]</td>
+<td>0.004</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 13: Number: 14; isPrime? false]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 14: Number: 15; isPrime? false]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 15: Number: 16; isPrime? false]</td>
+<td>0.002</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 16: Number: 17; isPrime? true]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 17: Number: 18; isPrime? false]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 18: Number: 19; isPrime? true]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 19: Number: 20; isPrime? false]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 20: Number: 21; isPrime? false]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 21: Number: 22; isPrime? false]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 22: Number: 23; isPrime? true]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 23: Number: 24; isPrime? false]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 24: Number: 25; isPrime? false]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 25: Number: 26; isPrime? false]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 26: Number: 27; isPrime? false]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 27: Number: 28; isPrime? false]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 28: Number: 29; isPrime? true]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 29: Number: 30; isPrime? false]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 30: Number: 31; isPrime? true]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 31: Number: 32; isPrime? false]</td>
+<td>0</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 32: Number: 33; isPrime? false]</td>
+<td>0.004</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 33: Number: 34; isPrime? false]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 34: Number: 35; isPrime? false]</td>
+<td>0.001</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 35: Number: 36; isPrime? false]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 36: Number: 37; isPrime? true]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 37: Number: 38; isPrime? false]</td>
+<td>0.001</td></tr>
+<tr class="a">
+<td><a href="#core.PrimeNumberCheckerTest.testPrimeNumberChecker[Iteration # 38: Number: 39; isPrime? true]"><img src="images/icon_error_sml.gif" alt="" /></a></td>
+<td><a href="#core.PrimeNumberCheckerTest.testPrimeNumberChecker[Iteration # 38: Number: 39; isPrime? true]">testPrimeNumberChecker[Iteration # 38: Number: 39; isPrime? true]</a>
+<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay(&apos;core_PrimeNumberCheckerTest_testPrimeNumberChecker[Iteration # 38: Number: 39; isPrime? true]&apos;);"><span style="display:inline;" id="core_PrimeNumberCheckerTest_testPrimeNumberChecker[Iteration # 38: Number: 39; isPrime? true]off"> + </span><span style="display:none;" id="core_PrimeNumberCheckerTest_testPrimeNumberChecker[Iteration # 38: Number: 39; isPrime? true]on"> - </span>[ Detail ]</a></div></td>
+<td>0.002</td></tr>
+<tr class="b">
 <td></td>
-<td>String not the same. expected:&lt;Testing [TestNG 6]&gt; but was:&lt;Testing [JUnit 4]&gt;</td>
+<td>expected:&lt;true&gt; but was:&lt;false&gt;</td>
 <td></td></tr>
 <tr class="a">
 <td></td>
 <td>
-<div id="core_AppTest_Test_02_AssertEquals_Negativeerror" style="display:none;">
+<div id="core_PrimeNumberCheckerTest_testPrimeNumberChecker[Iteration # 38: Number: 39; isPrime? true]error" style="display:none;">
 <div>
-<pre>org.junit.ComparisonFailure: String not the same. expected:&lt;Testing [TestNG 6]&gt; but was:&lt;Testing [JUnit 4]&gt;at org.junit.Assert.assertEquals(Assert.java:115)at core.AppTest.Test_02_AssertEquals_Negative(AppTest.java:28)</pre></div></div></td>
-<td></td></tr>
-<tr class="b">
-<td><a href="#core.AppTest.Test_03_AssertEquals_Ignored"><img src="images/icon_warning_sml.gif" alt="" /></a></td>
-<td><a href="#core.AppTest.Test_03_AssertEquals_Ignored">Test_03_AssertEquals_Ignored</a>
-<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay(&apos;core_AppTest_Test_03_AssertEquals_Ignored&apos;);"><span style="display:inline;" id="core_AppTest_Test_03_AssertEquals_Ignoredoff"> + </span><span style="display:none;" id="core_AppTest_Test_03_AssertEquals_Ignoredon"> - </span>[ Detail ]</a></div></td>
-<td>0.003</td></tr>
-<tr class="a">
-<td></td>
-<td>skipped</td>
+<pre>java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;at org.junit.Assert.fail(Assert.java:88)at org.junit.Assert.failNotEquals(Assert.java:743)at org.junit.Assert.assertEquals(Assert.java:118)at org.junit.Assert.assertEquals(Assert.java:144)at core.PrimeNumberCheckerTest.testPrimeNumberChecker(PrimeNumberCheckerTest.java:94)at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:606)at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)at org.junit.runners.ParentRunner.run(ParentRunner.java:309)at org.junit.runners.Suite.runChild(Suite.java:127)at org.junit.runners.Suite.runChild(Suite.java:26)at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)at org.junit.runners.ParentRunner.run(ParentRunner.java:309)at org.junit.runners.Suite.runChild(Suite.java:127)at org.junit.runners.Suite.runChild(Suite.java:26)at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)at org.junit.runners.ParentRunner.run(ParentRunner.java:309)at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:606)at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)</pre></div></div></td>
 <td></td></tr>
 <tr class="b">
 <td><img src="images/icon_success_sml.gif" alt="" /></td>
-<td>Test_09_AssertTrue_Positive</td>
+<td>testPrimeNumberChecker[Iteration # 39: Number: 40; isPrime? false]</td>
+<td>0.019</td></tr>
+<tr class="a">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 40: Number: 41; isPrime? true]</td>
+<td>0</td></tr>
+<tr class="b">
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 41: Number: 42; isPrime? false]</td>
 <td>0</td></tr>
 <tr class="a">
-<td><a href="#core.AppTest.Test_10_AssertTrue_Negative"><img src="images/icon_error_sml.gif" alt="" /></a></td>
-<td><a href="#core.AppTest.Test_10_AssertTrue_Negative">Test_10_AssertTrue_Negative</a>
-<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay(&apos;core_AppTest_Test_10_AssertTrue_Negative&apos;);"><span style="display:inline;" id="core_AppTest_Test_10_AssertTrue_Negativeoff"> + </span><span style="display:none;" id="core_AppTest_Test_10_AssertTrue_Negativeon"> - </span>[ Detail ]</a></div></td>
-<td>0.002</td></tr>
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 42: Number: 43; isPrime? true]</td>
+<td>0.001</td></tr>
 <tr class="b">
-<td></td>
-<td>Boolean should be true</td>
-<td></td></tr>
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 43: Number: 44; isPrime? false]</td>
+<td>0.001</td></tr>
 <tr class="a">
-<td></td>
-<td>
-<div id="core_AppTest_Test_10_AssertTrue_Negativeerror" style="display:none;">
-<div>
-<pre>java.lang.AssertionError: Boolean should be trueat org.junit.Assert.fail(Assert.java:88)at org.junit.Assert.assertTrue(Assert.java:41)at core.AppTest.Test_10_AssertTrue_Negative(AppTest.java:54)</pre></div></div></td>
-<td></td></tr>
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 44: Number: 45; isPrime? false]</td>
+<td>0</td></tr>
 <tr class="b">
-<td><a href="#core.AppTest.Test_08_AssertFalse_Negative"><img src="images/icon_error_sml.gif" alt="" /></a></td>
-<td><a href="#core.AppTest.Test_08_AssertFalse_Negative">Test_08_AssertFalse_Negative</a>
-<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay(&apos;core_AppTest_Test_08_AssertFalse_Negative&apos;);"><span style="display:inline;" id="core_AppTest_Test_08_AssertFalse_Negativeoff"> + </span><span style="display:none;" id="core_AppTest_Test_08_AssertFalse_Negativeon"> - </span>[ Detail ]</a></div></td>
-<td>0.002</td></tr>
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 45: Number: 46; isPrime? false]</td>
+<td>0</td></tr>
 <tr class="a">
-<td></td>
-<td>Boolean should be false</td>
-<td></td></tr>
-<tr class="b">
-<td></td>
-<td>
-<div id="core_AppTest_Test_08_AssertFalse_Negativeerror" style="display:none;">
-<div>
-<pre>java.lang.AssertionError: Boolean should be falseat org.junit.Assert.fail(Assert.java:88)at org.junit.Assert.assertTrue(Assert.java:41)at org.junit.Assert.assertFalse(Assert.java:64)at core.AppTest.Test_08_AssertFalse_Negative(AppTest.java:48)</pre></div></div></td>
-<td></td></tr>
-<tr class="a">
-<td><a href="#core.AppTest.Test_06_AssertSame_Ignored"><img src="images/icon_warning_sml.gif" alt="" /></a></td>
-<td><a href="#core.AppTest.Test_06_AssertSame_Ignored">Test_06_AssertSame_Ignored</a>
-<div class="detailToggle" style="display:inline"><a href="javascript:toggleDisplay(&apos;core_AppTest_Test_06_AssertSame_Ignored&apos;);"><span style="display:inline;" id="core_AppTest_Test_06_AssertSame_Ignoredoff"> + </span><span style="display:none;" id="core_AppTest_Test_06_AssertSame_Ignoredon"> - </span>[ Detail ]</a></div></td>
-<td>0.002</td></tr>
-<tr class="b">
-<td></td>
-<td>skipped</td>
-<td></td></tr></table></div><br /></div>
+<td><img src="images/icon_success_sml.gif" alt="" /></td>
+<td>testPrimeNumberChecker[Iteration # 46: Number: 47; isPrime? true]</td>
+<td>0</td></tr></table></div><br /></div>
 <div class="section">
 <h2>Failure Details<a name="Failure_Details"></a></h2><a name="Failure_Details"></a>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><br />
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><img src="images/icon_error_sml.gif" alt="" /></td>
-<td><a name="core.AppTest.Test_05_AssertSame_Negative"></a>Test_05_AssertSame_Negative</td></tr>
+<td><a name="core.PrimeNumberCheckerTest.testPrimeNumberCheckerIteration__3:_Number:_4_isPrime_false"></a>testPrimeNumberChecker[Iteration # 3: Number: 4; isPrime? false]</td></tr>
 <tr class="b">
 <td></td>
-<td>java.lang.AssertionError: Integer not the same. expected same:&lt;54&gt; was not:&lt;55&gt;</td></tr>                
+<td>java.lang.AssertionError: expected:&lt;false&gt; but was:&lt;true&gt;</td></tr>                                                                                                                                                                                                            
 <tr class="a">
 <td></td>
 <td>
-<div id="Test_05_AssertSame_Negativeerror">core.AppTest:38</div></td></tr>
+<div id="testPrimeNumberChecker[Iteration # 3: Number: 4; isPrime? false]error">core.PrimeNumberCheckerTest:</div></td></tr>
 <tr class="b">
 <td><img src="images/icon_error_sml.gif" alt="" /></td>
-<td><a name="core.AppTest.Test_02_AssertEquals_Negative"></a>Test_02_AssertEquals_Negative</td></tr>
+<td><a name="core.PrimeNumberCheckerTest.testPrimeNumberCheckerIteration__38:_Number:_39_isPrime_true"></a>testPrimeNumberChecker[Iteration # 38: Number: 39; isPrime? true]</td></tr>
 <tr class="a">
 <td></td>
-<td>org.junit.ComparisonFailure: String not the same. expected:&lt;Testing [TestNG 6]&gt; but was:&lt;Testing [JUnit 4]&gt;</td></tr>        
+<td>java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;</td></tr>                                                                                                                                                                                                        
 <tr class="b">
 <td></td>
 <td>
-<div id="Test_02_AssertEquals_Negativeerror">core.AppTest:28</div></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" /></td>
-<td><a name="core.AppTest.Test_03_AssertEquals_Ignored"></a>Test_03_AssertEquals_Ignored</td></tr>
-<tr class="b">
-<td></td>
-<td>skipped: skipped</td></tr>
-<tr class="a">
-<td><img src="images/icon_error_sml.gif" alt="" /></td>
-<td><a name="core.AppTest.Test_10_AssertTrue_Negative"></a>Test_10_AssertTrue_Negative</td></tr>
-<tr class="b">
-<td></td>
-<td>java.lang.AssertionError: Boolean should be true</td></tr>            
-<tr class="a">
-<td></td>
-<td>
-<div id="Test_10_AssertTrue_Negativeerror">core.AppTest:54</div></td></tr>
-<tr class="b">
-<td><img src="images/icon_error_sml.gif" alt="" /></td>
-<td><a name="core.AppTest.Test_08_AssertFalse_Negative"></a>Test_08_AssertFalse_Negative</td></tr>
-<tr class="a">
-<td></td>
-<td>java.lang.AssertionError: Boolean should be false</td></tr>                
-<tr class="b">
-<td></td>
-<td>
-<div id="Test_08_AssertFalse_Negativeerror">core.AppTest:48</div></td></tr>
-<tr class="a">
-<td><img src="images/icon_warning_sml.gif" alt="" /></td>
-<td><a name="core.AppTest.Test_06_AssertSame_Ignored"></a>Test_06_AssertSame_Ignored</td></tr>
-<tr class="b">
-<td></td>
-<td>skipped: skipped</td></tr></table><br /></div>
+<div id="testPrimeNumberChecker[Iteration # 38: Number: 39; isPrime? true]error">core.PrimeNumberCheckerTest:</div></td></tr></table><br /></div>
       </div>
     </div>
     <div class="clear">
